@@ -16,6 +16,8 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  align-items: center;
 }
 
 h1,
@@ -35,4 +37,49 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content{
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: end;
+  width: 100%;
+  padding: 30px;
+}
+
+.result {
+  grid-column: 1/2;
+}
+
+.content__details {
+  grid-column: 2/3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.content__list {
+  padding-top: 26px;
+  /*height: 298px;*/
+  height: 200px;
+  overflow: auto;
+}
+
+.result__video {
+  width: 100%;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
 }
