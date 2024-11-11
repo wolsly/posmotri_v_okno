@@ -64,6 +64,7 @@ ol {
 }
 
 .content__list {
+  position: relative;
   padding-top: 26px;
   height: 320px;
   overflow: auto;
@@ -84,6 +85,7 @@ ol {
 }
 
 .result__video-container {
+  position: relative;
   margin-bottom: 5px;
   min-width: 711px;
 }
@@ -127,3 +129,7 @@ ol {
 .content__video-card-description-container {
   flex-grow: 1;
 }
+
+/*.preloader {*/
+/*  position: absolute;*/
+/*}*/
