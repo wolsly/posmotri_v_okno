@@ -17,7 +17,8 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   display: flex;
-  align-items: center;
+  align-items: start;
+  padding-top: 67px;
 }
 
 h1,
@@ -39,13 +40,14 @@ ol {
   list-style: none;
 }
 
-.content{
+.content {
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(2, 1fr);
   align-items: end;
   width: 100%;
   padding: 30px;
+  margin-top: 35px;
 }
 
 .result {
@@ -63,13 +65,15 @@ ol {
 
 .content__list {
   padding-top: 26px;
-  /*height: 298px;*/
-  height: 200px;
+  height: 320px;
   overflow: auto;
 }
 
 .result__video {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -79,7 +83,47 @@ ol {
   align-items: flex-start;
 }
 
+.result__video-container {
+  margin-bottom: 5px;
+  min-width: 711px;
+}
+
+.title {
+  font: 400 75px 'Oswald', 'sans-serif';
+  text-transform: uppercase;
+  /*Я думаю что line-height нужно задать относительным*/
+  line-height: 72px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list-item {
+  margin-bottom: 36px;
+}
+
+.content__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.video-card {
+  display: flex;
+  height: 100%;
+}
+
 .content__video-card-thumbnail {
-  width: 194px;
   height: 103px;
+  width: 194px;
+  object-fit: cover;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
 }
