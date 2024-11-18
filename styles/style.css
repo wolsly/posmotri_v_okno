@@ -12,10 +12,6 @@ html {
   block-size: 100%;
 }
 
-html, body {
-  overflow-y: auto;
-}
-
 button {
   cursor: pointer;
   background: none;
@@ -67,8 +63,7 @@ ol {
   grid-template-columns: repeat(2, 1fr);
   align-items: end;
   width: 100%;
-  padding: 30px;
-  margin-top: 15px;
+  padding: 0 30px;
 }
 
 .result {
@@ -92,7 +87,6 @@ ol {
   overflow: auto;
   display: flex;
   flex-direction: column;
-  scrollbar-width: none;
 }
 
 .result__video {
