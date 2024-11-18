@@ -12,6 +12,10 @@ html {
   block-size: 100%;
 }
 
+html, body {
+  overflow-y: auto;
+}
+
 button {
   cursor: pointer;
   background: none;
@@ -35,6 +39,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  /*overflow: auto;*/
 }
 
 h1,
@@ -87,6 +92,7 @@ ol {
   overflow: auto;
   display: flex;
   flex-direction: column;
+  scrollbar-width: none;
 }
 
 .result__video {
@@ -97,6 +103,7 @@ ol {
 }
 
 .search-form {
+  padding-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -109,11 +116,11 @@ ol {
   position: relative;
   margin-bottom: 5px;
   min-width: 711px;
+  height: 386px;
 }
 
 .title {
   width: 260px;
-  height: 210px;
   font-family: Oswald, sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -141,6 +148,15 @@ ol {
   margin-left: 4px;
 }
 
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+}
+
 .content__list-item:last-child {
   margin-bottom: 0;
 }
@@ -149,7 +165,6 @@ ol {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-grow: 1;
 }
 
 .video-card {
@@ -161,6 +176,7 @@ ol {
   height: 103px;
   width: 194px;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-description {
@@ -171,16 +187,17 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .content__video-card-title {
   font-family: Oswald, sans-serif;
   color: #fff;
-  text-shadow: 0 4px 4px rgb(0 0 0 / 0.25);
   text-transform: uppercase;
   font-size: 30px;
   line-height: 100%;
-  margin-top: 4px;
 }
 
 .search-form__fieldset-title {
@@ -214,16 +231,6 @@ ol {
   display: flex;
   flex-direction: row;
   gap: 14px;
-}
-
-.search-form__pseudo-checkbox {
-  display: block;
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  background-color: transparent;
-  border: 1px solid #fff;
-  position: relative;
 }
 
 /* Отрисовка псевдочекбокса в состоянии checked*/
@@ -284,6 +291,7 @@ ol {
 .search-form__submit-button {
   min-width: 194px;
   align-self: flex-end;
+  line-height: 22px;
 }
 
 .button {
@@ -291,6 +299,7 @@ ol {
   color: #fff;
   font-size: 18px;
   border: 1px solid #fff;
+  font-weight: 700;
   min-height: 34px;
 }
 
@@ -311,10 +320,6 @@ ol {
   outline-offset: 2px;
 }
 
-.search-form__submit-button {
-  line-height: 22px;
-}
-
 /* Потребовалось сделать кнопку чуть уже, чтобы outline сработал и влез в контейнер */
 .more-button {
   width: 98%;
@@ -323,10 +328,6 @@ ol {
 
 .content__card-link_current {
   background-color: #545050;
-}
-
-.content__list {
-  scrollbar-width: none;
 }
 
 .content__card-link:focus-visible {
